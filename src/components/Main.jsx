@@ -34,7 +34,7 @@ const Main = () => {
 
         return;
       }
-      let data = await axios.post('https://shop-sleuth-backend.vercel.app/productLink', 
+      let data = await axios.post(`${url}/productLink`, 
         { productLink: link },
         {
           headers: {
