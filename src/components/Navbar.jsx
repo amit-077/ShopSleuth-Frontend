@@ -8,7 +8,10 @@ const Navbar = () => {
   const navigation = useNavigate();
   const sampleCall = async () => {
     navigation("/");
-    let data = await axios.post(`${url}`, {name: "ShopSleuth - Developed by Amit"});
+    let data = await axios.post(`${url}/productLink`, {
+      productLink:
+        "https://www.flipkart.com/boat-airdopes-131-upto-60-hours-asap-charge-bluetooth-headset/p/itm791b64335e2bf?pid=ACCG48F2YZNGZ8D2&lid=LSTACCG48F2YZNGZ8D2RGUPFU&marketplace=FLIPKART&srno=s_1_3&otracker=search&otracker1=search&fm=Search&iid=6ec52e51-4bae-4129-b68e-6a51ca575d8c.ACCFSDGXX3S6DVBG.SEARCH&ppt=sp&ppn=sp&ssid=cahptg8bls0000001719143715663&qH=98db617f57fac13f",
+    });
     console.log(data);
   };
 
