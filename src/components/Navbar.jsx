@@ -8,7 +8,7 @@ const Navbar = () => {
   const navigation = useNavigate();
   const sampleCall = async () => {
     navigation("/");
-    let data = await axios.get(`${url}`);
+    let data = await axios.post(`${url}`, {name: "ShopSleuth - Developed by Amit"});
     console.log(data);
   };
 
