@@ -34,7 +34,11 @@ const Main = () => {
 
         return;
       }
-      let data = await axios.post(`${url}/productLink`, { productLink: link });
+      let data = await axios.post(
+        `${url}/productLink`,
+        { productLink: link },
+        { withCredentials: false }
+      );
       if (data.status === 200) {
         console.log(data.data);
         setData(data.data);
